@@ -1,4 +1,4 @@
-[elementary-Seach](http://labs.eustasy.org/esearch/)
+[elementary-Search](http://labs.eustasy.org/esearch/)
 ================
 
 ###Features
