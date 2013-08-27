@@ -4,10 +4,10 @@
 ###Features
 - Search with Google, Yahoo! or DuckDuckGo.
 - Uses no Cookies by default.
+- Prompt to allow cookies when changing search engine to remember default when cookies are not allowed.
 - Saveable dimming state.
 
 ###Minor Upcoming Changes
-- Prompt to allow cookies when changing search engine to remember default when cookies are not allowed.
 - Add NoScript fallbacks that utilise PHP pages to update cookies for settings.
 - Allow selection of a default background (or rotation).
 - Maintain footer:hover when popovers are open.
