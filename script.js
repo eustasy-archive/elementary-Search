@@ -1,6 +1,6 @@
 // BEGIN Vertical-Centering for the Search form and Height-Setting for it's Button
 function getSize(){ // Define a function to get the sizes and position them properly
-	var heightTop = ($(window).height()/2) - $('#search').height()- ($('#footer').height()/2); // Get the new Heights Top
+	var heightTop = ($(window).height()/2) - ($('#search').height()/2) - ($('#footer').height()/2); // Get the new Heights Top
 	$('#search').css('margin-top',heightTop); // Set the new Heights Top
 	var heightForm = $('#search').height(); // Get the new Heights Top
 	$('#search-button').css('height',heightForm); // Set the new Heights Top
