@@ -40,10 +40,12 @@
 
 	</head>
 	<body>
-		<div id="darken"<?php if (isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] == 1 && isset($_COOKIE['darken'])) {
-				if ($_COOKIE['darken'] == 'always') {
-					echo ' style="background-color:rgba(0,0,0,0.3);"';
-				} elseif ($_COOKIE['darken'] == 'never') {
-					echo ' style="background-color:transparent;"';
-				}
-			} ?>>
+		<div id="darken" class="<?php
+			if (
+				isset($_COOKIE['allow_cookies']) &&
+				$_COOKIE['allow_cookies'] == 1 &&
+				isset($_COOKIE['darken'])
+			) {
+				echo htmlentities($_COOKIE['darken'], ENT_QUOTES, 'UTF-8');
+			}
+		?>">
