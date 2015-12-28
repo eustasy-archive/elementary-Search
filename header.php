@@ -8,13 +8,11 @@
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 		<?php echo $Meta; ?>
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:100,200,300">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:300">
 		<!-- <link rel="stylesheet" href="switches.css"> -->
 		<!-- <link rel="stylesheet" href="styles.css"> -->
 		<link rel="stylesheet" href="styles.min.css">
-		<script src="../modernizr.min.js"></script>
-		<script src="../jquery.min.js">	</script>
-		<script src="../jquery.cookie.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/g/jquery@2.1.4,jquery.cookie@1.4.1"></script>
 		<!-- <script src="script.js"></script> -->
 		<script src="script.min.js"></script>
 		<?php
