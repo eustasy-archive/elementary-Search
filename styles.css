@@ -68,21 +68,41 @@ img {
 	left: 0;
 	right: 0;
 	background: transparent;
-	-webkit-transition: all 300ms ease-in-out;
-	-moz-transition: all 300ms ease-in-out;
-	-ms-transition: all 300ms ease-in-out;
-	-o-transition: all 300ms ease-in-out;
-	transition: all 300ms ease-in-out;
+	background: rgba(0,0,0,0.3);
+	-webkit-transition: background 300ms ease-in-out;
+	-moz-transition: background 300ms ease-in-out;
+	-ms-transition: background 300ms ease-in-out;
+	-o-transition: background 300ms ease-in-out;
+	transition: background 300ms ease-in-out;
 }
 body:hover #darken {
 	background: transparent;
 	background: rgba(0,0,0,0.3);
-	-webkit-transition: all 300ms ease-in-out;
-	-moz-transition: all 300ms ease-in-out;
-	-ms-transition: all 300ms ease-in-out;
-	-o-transition: all 300ms ease-in-out;
-	transition: all 300ms ease-in-out;
+	-webkit-transition: background 300ms ease-in-out;
+	-moz-transition: background 300ms ease-in-out;
+	-ms-transition: background 300ms ease-in-out;
+	-o-transition: background 300ms ease-in-out;
+	transition: background 300ms ease-in-out;
 }
+#darken.always {
+	background: rgba(0,0,0,0.3);
+}
+body:hover #darken.always {
+	background: rgba(0,0,0,0.3);
+}
+#darken.hover {
+	background: transparent;
+}
+body:hover #darken.hover {
+	background: rgba(0,0,0,0.3);
+}
+#darken.never {
+	background: transparent;
+}
+body:hover #darken.never {
+	background: transparent;
+}
+
 #search {
 	margin: 0 auto;
 	padding: 0 0 0 26px;
