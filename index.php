@@ -76,9 +76,19 @@ require 'header.php';
 				<div class="control darken enabled switch switch-three candy" onclick="" <?php if (!isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] != 1) echo ' style="display:none;"'; ?>>
 					<input id="never" name="view" type="radio"<?php if (isset($_COOKIE['darken']) && $_COOKIE['darken'] == 'never') echo ' checked'; ?>>
 					<label class="darken-never" for="never" onclick="">Never</label>
-					<input id="hover" name="view" type="radio"<?php if (isset($_COOKIE['darken']) && $_COOKIE['darken'] == 'hover') echo ' checked'; ?><?php if (!isset	($_COOKIE['darken'])) echo ' checked'; ?>>
+					<input id="hover" name="view" type="radio"<?php if (isset($_COOKIE['darken']) && $_COOKIE['darken'] == 'hover') echo ' checked'; ?>>
 					<label class="darken-hover" for="hover" onclick="">On Hover</label>
-					<input id="always" name="view" type="radio"<?php if (isset($_COOKIE['darken']) && $_COOKIE['darken'] == 'always') echo ' checked'; ?>>
+					<input id="always" name="view" type="radio"<?php
+						if (
+							!isset($_COOKIE['darken']) ||
+							(
+								isset($_COOKIE['darken']) &&
+								$_COOKIE['darken'] == 'always'
+							)
+						) {
+							echo ' checked';
+						}
+					?>>
 					<label class="darken-always" for="always" onclick="">Always</label>
 					<span class="slide-button"></span>
 				</div>
