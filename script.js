@@ -55,19 +55,19 @@ $(function($) {
 
 	// BEGIN Darken Control
 	$('.darken-always').click(function() {
-		$('#darken').css('background-color', 'rgba(0,0,0,0.3)');
+		$('#darken').removeClass('hover').removeClass('never').addClass('always');
 		if (cookies === 'enabled') {
 			$.cookie('darken', 'always', { expires: 365, path: '/' });
 		};
 	});
 	$('.darken-hover').click(function() {
-		$('#darken').css('background-color', '');
+		$('#darken').removeClass('always').removeClass('never').addClass('hover');
 		if (cookies === 'enabled') {
 			$.cookie('darken', 'hover', { expires: 365, path: '/' });
 		};
 	});
 	$('.darken-never').click(function() {
-		$('#darken').css('background-color', 'transparent');
+		$('#darken').removeClass('always').removeClass('hover').addClass('never');
 		if (cookies === 'enabled') {
 			$.cookie('darken', 'never', { expires: 365, path: '/' });
 		};
