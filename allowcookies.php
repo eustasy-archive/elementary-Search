@@ -1,8 +1,8 @@
 <?php
 
 if (isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] == 1) {
-	header('Location: http://labs.eustasy.org/esearch/',TRUE,302);
-	die();
+	header('Location: http://labs.eustasy.org/esearch/', true, 302);
+	exit;
 }
 
 $Meta = '<title>Allow Cookies? &nbsp;&middot;&nbsp; elementary Search</title>';
@@ -13,14 +13,14 @@ require 'header.php'; ?>
 					<h4>You can change your decision at any time in the settings menu.</h4>
 					<p>Cookies are small pieces of information that your browser only displays to the website that sets them. They often work much like name badges, but we use them to store settings. Other sites may use them to keep you signed in, log searches or target advertising.</p>
 					<h3 class="button"><a href="http://labs.eustasy.org/esearch/">No</a></h3>
-					<h3 class="button positive"><a href="http://labs.eustasy.org/esearch/enablecookies.php">Yes</a></h3>
+					<h3 class="button positive"><a href="enablecookies.php">Yes</a></h3>
 					<div class="clear"></div>
 				</div>
 				<div class="clear"></div>
 			</div>
 		</div>
 		<footer id="footer">
-			<a href="http://elementaryos.org/" title="elementary OS"><img class="floatleft faded" src="logo.png"></a>
+			<a href="https://elementary.io/" title="elementary OS"><img class="floatleft faded" src="logo.png"></a>
 			<nav class="floatright">
 				<a href="#settings" class="settings">Settings</a> &nbsp;&middot;&nbsp;
 				<a href="#legal" class="legal">Legal</a>

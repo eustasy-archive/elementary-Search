@@ -1,6 +1,6 @@
 <?php
 $Meta = '<title>elementary Search</title>';
-require 'header.php';
+require __DIR__.'/_templates/header.php';
 ?>
 			<form id="search" action="<?php if (isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] == 1 && isset($_COOKIE['default_search'])) {
 				if ($_COOKIE['default_search'] == 'Google') {
@@ -24,7 +24,7 @@ require 'header.php';
 			</form>
 		</div>
 		<footer id="footer">
-			<a href="http://elementaryos.org/" title="elementary OS"><img class="floatleft faded" src="logo.png"></a>
+			<a href="https://elementary.io/" title="elementary OS"><img class="floatleft faded" src="logo.png"></a>
 			<span class="current-search">You are currently searching with <?php if (isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] == 1 && isset($_COOKIE['default_search'])) {
 				if ($_COOKIE['default_search'] == 'Google') {
 					echo 'Google';
@@ -49,7 +49,7 @@ require 'header.php';
 				</li>
 			</ul>';
 			} else {
-				echo '<a class="change-search" href="http://labs.eustasy.org/esearch/allowcookies.php">Change</a>';
+				echo '<a class="change-search" href="allowcookies.php">Change</a>';
 			}
 			?>
 			<nav class="floatright">

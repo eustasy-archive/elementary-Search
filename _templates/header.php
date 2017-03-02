@@ -9,10 +9,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 		<?php echo $Meta; ?>
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:300">
-		<link rel="stylesheet" href="switches.css">
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="assets/css/switches.css">
+		<link rel="stylesheet" href="assets/css/styles.css">
 		<script src="https://cdn.jsdelivr.net/g/jquery,jquery.cookie"></script>
-		<script src="script.js"></script>
+		<script src="assets/js/script.js"></script>
 		<?php
 
 		function fallBack() {
@@ -20,8 +20,8 @@
 			$k = array_rand($backgrounds);
 			$current = $backgrounds[$k];
 			echo '<style>
-			@media (max-width:1280px) { body { background: url(\'backgrounds/small/', $current, '_mini.jpg\') no-repeat center center fixed #222222; background-size: cover; } }
-			@media (min-width:1281px) { body { background: url(\'backgrounds/', $current, '_mini.jpg\') no-repeat center center fixed #222222; background-size: cover; } }
+			@media (max-width:1280px) { body { background: url(\'assets/images/backgrounds/small/', $current, '_mini.jpg\') no-repeat center center fixed #222222; background-size: cover; } }
+			@media (min-width:1281px) { body { background: url(\'assets/images/backgrounds/', $current, '_mini.jpg\') no-repeat center center fixed #222222; background-size: cover; } }
 		</style>';
 		}
 // This is where the cool new accounts stuff will go,

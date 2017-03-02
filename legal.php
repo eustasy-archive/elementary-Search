@@ -3,7 +3,7 @@
 			<div class="legal content">
 				<h2>Legal</h2>
 				<h3>Copyright Notice</h3>
-				<p>The eustasy name, brand, logo, and motif are Copyright &copy; property of <a href="http://www.eustasy.co.uk/">eustasy UK Ltd</a>, and are used solely as attribution to <a href="http://www.eustasy.org/">eustasy Org</a>. You may not utilise these items in any way which may be perceived as an endorsement of your site or service.</p>
+				<p>The eustasy name, brand, logo, and motif are Copyright &copy; property of <a href="https://eustasy.co.uk/">eustasy UK Ltd</a>, and are used solely as attribution to <a href="https://eustasy.org/">eustasy Org</a>. You may not utilise these items in any way which may be perceived as an endorsement of your site or service.</p>
 				<p>The contents of any website, linked, displayed, or otherwise referenced, including the elementary project, remain the property of their respective owners.</p>
 				<h3>Website Disclaimer</h3>
 				<p>The information contained in or linked to from this website is for general information purposes only. We make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.</p>
