@@ -1,6 +1,8 @@
 [elementary-Search](http://labs.eustasy.org/elementary-Search/)
 ================
 
+[![Build Status](https://travis-ci.org/eustasy/elementary-Search.svg?branch=master)](https://travis-ci.org/eustasy/elementary-Search)
+
 ### Features
 - Search with Google, Yahoo! or DuckDuckGo.
 - Uses no Cookies by default.
