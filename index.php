@@ -24,7 +24,7 @@ require __DIR__.'/_templates/header.php';
 			</form>
 		</div>
 		<footer id="footer">
-			<a href="https://elementary.io/" title="elementary OS"><img class="floatleft faded" src="logo.png"></a>
+			<a href="https://elementary.io/" title="elementary OS"><img class="floatleft faded" src="assets/images/logo.png"></a>
 			<span class="current-search">You are currently searching with <?php if (isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] == 1 && isset($_COOKIE['default_search'])) {
 				if ($_COOKIE['default_search'] == 'Google') {
 					echo 'Google';

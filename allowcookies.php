@@ -20,7 +20,7 @@ require 'header.php'; ?>
 			</div>
 		</div>
 		<footer id="footer">
-			<a href="https://elementary.io/" title="elementary OS"><img class="floatleft faded" src="logo.png"></a>
+			<a href="https://elementary.io/" title="elementary OS"><img class="floatleft faded" src="assets/images/logo.png"></a>
 			<nav class="floatright">
 				<a href="#settings" class="settings">Settings</a> &nbsp;&middot;&nbsp;
 				<a href="#legal" class="legal">Legal</a>
