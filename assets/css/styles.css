@@ -114,7 +114,7 @@ body:hover #darken.never {
 	transition: all 300ms ease-in-out;
 }
 #search-button {
-	background: transparent url('../assets/images/search.png') no-repeat center center;
+	background: transparent url('../images/search.png') no-repeat center center;
 	border: none;
 	border-radius: 3px;
 	padding: 0;
@@ -236,7 +236,7 @@ img.faded:hover, a.faded:hover {
 	max-height: 75%;
 }
 .close {
-	background: url("../assets/images/close.png") no-repeat scroll 3px 3px #ffffff;
+	background: url("../images/close.png") no-repeat scroll 3px 3px #ffffff;
 	cursor: pointer;
 	height: 30px;
 	width: 30px;
