@@ -6,7 +6,7 @@ if (isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] == 1) {
 }
 
 $Meta = '<title>Allow Cookies? &nbsp;&middot;&nbsp; elementary Search</title>';
-require 'header.php'; ?>
+require __DIR__.'/_templates/header.php'; ?>
 			<div id="search">
 				<div id="search-entry">
 					<h2>Do you want to allow Cookies?</h2>
