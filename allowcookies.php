@@ -51,7 +51,7 @@ require __DIR__.'/_templates/header.php'; ?>
 					<label class="darken-always" for="always" onclick="">Always</label>
 					<span class="slide-button"></span>
 				</div>
-				<div class="control darken disabled switch switch-three candy" onclick="" <?php if (isset($_COOKIE['allow_cookies']) || $_COOKIE['allow_cookies'] == 1) echo ' style="display:none;"'; ?>>
+				<div class="control darken disabled switch switch-three candy" onclick="" <?php if (isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] == 1) echo ' style="display:none;"'; ?>>
 					<h4>You must enable cookies to change this setting.</h4>
 				</div>
 
