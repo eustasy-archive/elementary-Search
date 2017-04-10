@@ -1,4 +1,4 @@
-[elementary-Search](http://labs.eustasy.org/elementary-Search/)
+[elementary-Search](https://labs.eustasy.org/elementary-Search/)
 ================
 
 [![Build Status](https://travis-ci.org/eustasy/elementary-Search.svg?branch=master)](https://travis-ci.org/eustasy/elementary-Search)
