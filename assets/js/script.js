@@ -2,13 +2,13 @@
 
 // BEGIN Vertical-Centering for the Search form and Height-Setting for it's Button
 function getSize(){ // Define a function to get the sizes and position them properly
-	var heightTop = ($(window).height()/2) - ($('#search').height()/2) - ($('#footer').height()/2); // Get the new Heights Top
-	$('#search').css('margin-top',heightTop); // Set the new Heights Top
-	var heightForm = $('#search').height(); // Get the new Heights Top
-	$('#search-button').css('height',heightForm); // Set the new Heights Top
-}; // The function's finished
-$(document).ready(getSize); // Run on pageload
-$(window).resize(getSize); // Run on resize
+	var heightTop = ($(window).height()/2) - ($('#search').height()/2) - ($('#footer').height()/2) // Get the new Heights Top
+	$('#search').css('margin-top',heightTop) // Set the new Heights Top
+	var heightForm = $('#search').height() // Get the new Heights Top
+	$('#search-button').css('height',heightForm) // Set the new Heights Top
+} // The function's finished
+$(document).ready(getSize) // Run on pageload
+$(window).resize(getSize) // Run on resize
 // END Vertical-Centering for the Search form and Height-Setting for it's Button
 
 
@@ -85,7 +85,8 @@ $(function($) {
 		if (cookies === 'enabled') {
 			$.cookie('default_search', 'DuckDuckGo', { expires: 365, path: '/' })
 		}
-	});	$('.change-to-google').click(function() {
+	})
+	$('.change-to-google').click(function() {
 		$('#search').attr('action', 'https://www.google.com/search')
 		$('.current-search').html('You are currently searching with Google.')
 		if (cookies === 'enabled') {
@@ -104,10 +105,10 @@ $(function($) {
 
 
 	// BEGIN Settings Popup Controls
-	$('a.settings').click(function() { loadSettings(); })
-	$('.settings.close').click(function() { disableSettings(); })
-	$('.settings.background').click(function() { disableSettings(); })
-	$(this).keyup(function(event) { if (event.which == 27) { disableSettings(); }})
+	$('a.settings').click(function() { loadSettings() })
+	$('.settings.close').click(function() { disableSettings() })
+	$('.settings.background').click(function() { disableSettings() })
+	$(this).keyup(function(event) { if (event.which == 27) { disableSettings() }})
 	var SettingsStatus = 0
 	function loadSettings() {
 		if(SettingsStatus === 0) {
@@ -131,10 +132,10 @@ $(function($) {
 
 
 	// BEGIN Legal Popup Controls
-	$('a.legal').click(function() { loadLegal(); })
-	$('.legal.close').click(function() { disableLegal(); })
-	$('.legal.background').click(function() { disableLegal(); })
-	$(this).keyup(function(event) { if (event.which == 27) { disableLegal(); }})
+	$('a.legal').click(function() { loadLegal() })
+	$('.legal.close').click(function() { disableLegal() })
+	$('.legal.background').click(function() { disableLegal() })
+	$(this).keyup(function(event) { if (event.which == 27) { disableLegal() }})
 	var LegalStatus = 0
 	function loadLegal() {
 		if(LegalStatus === 0) {
