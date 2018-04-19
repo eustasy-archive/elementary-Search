@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/eustasy/elementary-Search.svg?branch=master)](https://travis-ci.org/eustasy/elementary-Search)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/60bde73a651e4e05ae52039c36b62021)](https://www.codacy.com/app/lewisgoddard/elementary-Search?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eustasy/elementary-Search&amp;utm_campaign=Badge_Grade)
-[![Code Climate](https://codeclimate.com/github/eustasy/elementary-Search/badges/gpa.svg)](https://codeclimate.com/github/eustasy/elementary-Search)
+[![Maintainability](https://api.codeclimate.com/v1/badges/8c45097804db5baff3b5/maintainability)](https://codeclimate.com/github/eustasy/elementary-Search/maintainability)
 [![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=240433)](https://www.bountysource.com/teams/eustasy/issues?tracker_ids=240433)
 
 ### Features
