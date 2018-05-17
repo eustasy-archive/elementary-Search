@@ -27,7 +27,8 @@ require __DIR__.'/_templates/header.php';
 		</div>
 		<footer id="footer">
 			<a href="https://elementary.io/" title="elementary OS"><img class="floatleft faded" src="assets/images/logo.png"></a>
-			<span class="current-search">You are currently searching with <?php if (isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] == 1 && isset($_COOKIE['default_search'])) {
+			<span class="current-search">You are currently searching with <?php
+			if (isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] == 1 && isset($_COOKIE['default_search'])) {
 				if ($_COOKIE['default_search'] == 'Google') {
 					echo 'Google';
 				} elseif ($_COOKIE['default_search'] == 'Yahoo') {
@@ -37,7 +38,8 @@ require __DIR__.'/_templates/header.php';
 				}
 			} else {
 				echo 'DuckDuckGo';
-			} ?>.</span> &nbsp;&middot;&nbsp;
+			}
+			?>.</span> &nbsp;&middot;&nbsp;
 			<?php
 			if (isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] == 1) {
 				echo '
