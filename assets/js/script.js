@@ -57,23 +57,24 @@ $(function($) {
 
 
 	// BEGIN Darken Control
-	$('.darken-always').click(function() {
-		$('#darken').removeClass('hover').removeClass('never').addClass('always')
+	function setDarkness(dark_name) {
+		$('#darken')
+			.removeClass('never')
+			.removeClass('hover')
+			.removeClass('always')
+			.addClass(dark_name)
 		if (cookies === 'enabled') {
-			Cookies.set('darken', 'always', { expires: 365, path: '/' })
+			Cookies.set('darken', dark_name, { expires: 365, path: '/' })
 		}
+	}
+	$('.darken-always').click(function() {
+		setDarkness('always')
 	})
 	$('.darken-hover').click(function() {
-		$('#darken').removeClass('always').removeClass('never').addClass('hover')
-		if (cookies === 'enabled') {
-			Cookies.set('darken', 'hover', { expires: 365, path: '/' })
-		}
+		setDarkness('hover')
 	})
 	$('.darken-never').click(function() {
-		$('#darken').removeClass('always').removeClass('hover').addClass('never')
-		if (cookies === 'enabled') {
-			Cookies.set('darken', 'never', { expires: 365, path: '/' })
-		}
+		setDarkness('never')
 	})
 	// END Darken Control
 
