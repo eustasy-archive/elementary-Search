@@ -16,7 +16,7 @@
 		<?php
 
 		function fallBack() {
-			$backgrounds = glob(__DIR__.'/../assets/images/wallpapers/*.jpg', $Flags);
+			$backgrounds = glob(__DIR__.'/../assets/images/wallpapers/*.jpg');
 			$k = array_rand($backgrounds);
 			$current = array_pop(explode('/', $backgrounds[$k]));
 			var_dump($current);
