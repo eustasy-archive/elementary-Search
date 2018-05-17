@@ -2,7 +2,8 @@
 $Meta = '<title>elementary Search</title>';
 require __DIR__.'/_templates/header.php';
 ?>
-			<form id="search" action="<?php if (isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] == 1 && isset($_COOKIE['default_search'])) {
+			<form id="search" action="<?php
+			if (isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] == 1 && isset($_COOKIE['default_search'])) {
 				if ($_COOKIE['default_search'] == 'Google') {
 					echo 'https://www.google.com/search';
 				} elseif ($_COOKIE['default_search'] == 'Yahoo') {
@@ -12,7 +13,8 @@ require __DIR__.'/_templates/header.php';
 				}
 			} else {
 				echo 'https://duckduckgo.com/';
-			} ?>" method="get">
+			}
+			?>" method="get">
 				<!--[if lte IE 9]>
 					<input type="text" value="Search" id="search-entry" name="q" onfocus="javascript: if(this.value == 'Search'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Search';}" autocomplete="off" autofocus>
 				<![endif]-->
