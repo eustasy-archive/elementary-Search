@@ -111,17 +111,17 @@ $(function($) {
 	$(this).keyup(function(event) { if (event.which == 27) { disableSettings() }})
 	var SettingsStatus = 0
 	function loadSettings() {
-		if(SettingsStatus === 0) {
-			$('.settings.popup').fadeIn(0500)
+		if (SettingsStatus === 0) {
+			$('.settings.popup').fadeIn(500)
 			$('.settings.background').css('opacity', '0.7')
-			$('.settings.background').fadeIn(0001)
+			$('.settings.background').fadeIn(1)
 			// This is an Advert in the settings menu that can be loaded only when it is opened.
 			// $('.control.advert').html('<iframe src="\/\/serve.adsi.st\/iframe.php?AdsistMemberID=lewisgoddard&AdsistAdClass=Banner&AdsistAdSize=Medium" style="width:468px;height:60px;border:none;overflow:hidden;" scrolling="no"><\/iframe>')
 			SettingsStatus = 1
 		}
 	}
 	function disableSettings() {
-		if(SettingsStatus === 1) {
+		if (SettingsStatus === 1) {
 			$('.settings.popup').fadeOut('normal')
 			$('.settings.background').fadeOut('normal')
 			SettingsStatus = 0
@@ -138,15 +138,15 @@ $(function($) {
 	$(this).keyup(function(event) { if (event.which == 27) { disableLegal() }})
 	var LegalStatus = 0
 	function loadLegal() {
-		if(LegalStatus === 0) {
-			$('.legal.popup').fadeIn(0500)
+		if (LegalStatus === 0) {
+			$('.legal.popup').fadeIn(500)
 			$('.legal.background').css('opacity', '0.7')
-			$('.legal.background').fadeIn(0001)
+			$('.legal.background').fadeIn(1)
 			LegalStatus = 1
 		}
 	}
 	function disableLegal() {
-		if(LegalStatus === 1) {
+		if (LegalStatus === 1) {
 		$('.legal.popup').fadeOut('normal')
 		$('.legal.background').fadeOut('normal')
 		LegalStatus = 0
