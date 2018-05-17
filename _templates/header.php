@@ -14,27 +14,10 @@
 		<script src="https://cdn.jsdelivr.net/combine/gh/jquery/jquery@3/dist/jquery.min.js,gh/chuckcarpenter/REM-unit-polyfill@1/js/rem.min.js,gh/LeaVerou/prefixfree@1/prefixfree.min.js,gh/js-cookie/js-cookie@2/src/js.cookie.min.js"></script>
 		<script src="assets/js/script.js"></script>
 		<?php
-
 			require_once __DIR__.'/../_functions/cookie.php';
-
-		function fallBack() {
-			$backgrounds = glob(__DIR__.'/../assets/images/wallpapers/*.jpg');
-			$k = array_rand($backgrounds);
-			$current = array_pop(explode('/', $backgrounds[$k]));
-			echo '<style>
-			body { background: url(\'assets/images/wallpapers/', $current, '\') no-repeat center center fixed #222222; background-size: cover; }
-		</style>';
-		}
-// This is where the cool new accounts stuff will go,
-// but first, in page selections!
-//		if (isset($_COOKIE['allow_cookies']) && isset($_COOKIE['chosen_background']) ) {
-			fallBack();
-//		} else {
-//			fallBack();
-//		}
-
+			require_once __DIR__.'/../_functions/nackground.php';
+			echo background();
 		?>
-
 	</head>
 	<body>
 		<div id="darken" class="<?php
