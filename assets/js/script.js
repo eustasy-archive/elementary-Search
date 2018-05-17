@@ -19,7 +19,7 @@ $(function($) {
 
 
 	// BEGIN On Load Check Cookies
-	var cookies;
+	var cookies
 	if ( Cookies.get('allow_cookies') === '1') {
 		cookies = 'enabled'
 	} else {
