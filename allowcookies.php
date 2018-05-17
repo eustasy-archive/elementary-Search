@@ -12,7 +12,7 @@ require __DIR__.'/_templates/header.php'; ?>
 					<h2>Do you want to allow Cookies?</h2>
 					<h4>You can change your decision at any time in the settings menu.</h4>
 					<p>Cookies are small pieces of information that your browser only displays to the website that sets them. They often work much like name badges, but we use them to store settings. Other sites may use them to keep you signed in, log searches or target advertising.</p>
-					<h3 class="button"><a href="http://labs.eustasy.org/elementary-Search/">No</a></h3>
+					<h3 class="button"><a href="https://labs.eustasy.org/elementary-Search/">No</a></h3>
 					<h3 class="button positive"><a href="enablecookies.php">Yes</a></h3>
 					<div class="clear"></div>
 				</div>

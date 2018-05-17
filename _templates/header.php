@@ -8,20 +8,20 @@
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 		<?php echo $Meta; ?>
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:300">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300">
 		<link rel="stylesheet" href="assets/css/switches.css">
 		<link rel="stylesheet" href="assets/css/styles.css">
-		<script src="https://cdn.jsdelivr.net/g/jquery,jquery.cookie"></script>
+		<script src="https://cdn.jsdelivr.net/combine/gh/jquery/jquery@3/dist/jquery.min.js,gh/chuckcarpenter/REM-unit-polyfill@1/js/rem.min.js,gh/LeaVerou/prefixfree@1/prefixfree.min.js,gh/js-cookie/js-cookie@2/src/js.cookie.min.js"></script>
 		<script src="assets/js/script.js"></script>
 		<?php
 
 		function fallBack() {
-			$backgrounds = array( '159', '16', '164', '168', '173', '2', '94', 'Cold Evening', 'Horseshoe Bend Sunset', 'Lake McDonald', 'Lake Tahoe Colors', 'Leaves', 'Lighthouse', 'Our Night Under The Stars', 'Paris la Tour Eiffel', 'Star River', 'The Coast', 'Tunnel', 'Urban Dream', 'Water Lily', 'morning');
+			$backgrounds = glob(__DIR__.'/../assets/images/wallpapers/*.jpg', $Flags);
 			$k = array_rand($backgrounds);
-			$current = $backgrounds[$k];
+			$current = array_pop(explode('/', $backgrounds[$k]));
+			var_dump($current);
 			echo '<style>
-			@media (max-width:1280px) { body { background: url(\'assets/images/backgrounds/small/', $current, '_mini.jpg\') no-repeat center center fixed #222222; background-size: cover; } }
-			@media (min-width:1281px) { body { background: url(\'assets/images/backgrounds/', $current, '_mini.jpg\') no-repeat center center fixed #222222; background-size: cover; } }
+			body { background: url(\'assets/images/wallpapers/', $current, '\') no-repeat center center fixed #222222; background-size: cover; }
 		</style>';
 		}
 // This is where the cool new accounts stuff will go,
