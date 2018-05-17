@@ -15,7 +15,7 @@
 		<script src="assets/js/script.js"></script>
 		<?php
 			require_once __DIR__.'/../_functions/cookie.php';
-			require_once __DIR__.'/../_functions/nackground.php';
+			require_once __DIR__.'/../_functions/background.php';
 			echo background();
 		?>
 	</head>
