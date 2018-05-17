@@ -19,10 +19,11 @@ $(function($) {
 
 
 	// BEGIN On Load Check Cookies
+	var cookies;
 	if ($.cookie('allow_cookies') === '1') {
-		var cookies = 'enabled'
+		cookies = 'enabled'
 	} else {
-		var cookies = 'disabled'
+		cookies = 'disabled'
 	}
 	// END On Load Check Cookies
 
@@ -31,7 +32,7 @@ $(function($) {
 	// BEGIN Cookie Control
 	$('.cookies-enabled').click(function() {
 		$.cookie('allow_cookies', '1', { expires: 365, path: '/' })
-		var cookies = 'enabled'
+		cookies = 'enabled'
 		$('.control.darken.enabled').css('display', 'block')
 		$('.control.darken.disabled').css('display', 'none')
 		var action = $('#search').attr('action')
@@ -46,7 +47,7 @@ $(function($) {
 	$('.cookies-disabled').click(function() {
 		$('.control.darken.enabled').css('display', 'none')
 		$('.control.darken.disabled').css('display', 'block')
-		var cookies = 'disabled'
+		cookies = 'disabled'
 		$.removeCookie('allow_cookies', { path: '/' })
 		$.removeCookie('default_search', { path: '/' })
 		$.removeCookie('darken', { path: '/' })
