@@ -20,7 +20,7 @@ $(function($) {
 
 	// BEGIN On Load Check Cookies
 	var cookies;
-	if ($.cookie('allow_cookies') === '1') {
+	if ( Cookies.get('allow_cookies') === '1') {
 		cookies = 'enabled'
 	} else {
 		cookies = 'disabled'
@@ -31,26 +31,26 @@ $(function($) {
 
 	// BEGIN Cookie Control
 	$('.cookies-enabled').click(function() {
-		$.cookie('allow_cookies', '1', { expires: 365, path: '/' })
+		Cookies.set('allow_cookies', '1', { expires: 365, path: '/' })
 		cookies = 'enabled'
 		$('.control.darken.enabled').css('display', 'block')
 		$('.control.darken.disabled').css('display', 'none')
 		var action = $('#search').attr('action')
 		if (action === 'https://duckduckgo.com/') {
-			$.cookie('default_search', 'DuckDuckGo', { expires: 365, path: '/' })
+			Cookies.set('default_search', 'DuckDuckGo', { expires: 365, path: '/' })
 		} else if (action === 'https://www.google.com/search') {
-			$.cookie('default_search', 'Google', { expires: 365, path: '/' })
+			Cookies.set('default_search', 'Google', { expires: 365, path: '/' })
 		} else if (action === 'https://search.yahoo.com/search') {
-			$.cookie('default_search', 'Yahoo', { expires: 365, path: '/' })
+			Cookies.set('default_search', 'Yahoo', { expires: 365, path: '/' })
 		}
 	})
 	$('.cookies-disabled').click(function() {
 		$('.control.darken.enabled').css('display', 'none')
 		$('.control.darken.disabled').css('display', 'block')
 		cookies = 'disabled'
-		$.removeCookie('allow_cookies', { path: '/' })
-		$.removeCookie('default_search', { path: '/' })
-		$.removeCookie('darken', { path: '/' })
+		Cookies.remove('allow_cookies', { path: '/' })
+		Cookies.remove('default_search', { path: '/' })
+		Cookies.remove('darken', { path: '/' })
 	})
 	// END Cookie Control
 
@@ -60,19 +60,19 @@ $(function($) {
 	$('.darken-always').click(function() {
 		$('#darken').removeClass('hover').removeClass('never').addClass('always')
 		if (cookies === 'enabled') {
-			$.cookie('darken', 'always', { expires: 365, path: '/' })
+			Cookies.set('darken', 'always', { expires: 365, path: '/' })
 		}
 	})
 	$('.darken-hover').click(function() {
 		$('#darken').removeClass('always').removeClass('never').addClass('hover')
 		if (cookies === 'enabled') {
-			$.cookie('darken', 'hover', { expires: 365, path: '/' })
+			Cookies.set('darken', 'hover', { expires: 365, path: '/' })
 		}
 	})
 	$('.darken-never').click(function() {
 		$('#darken').removeClass('always').removeClass('hover').addClass('never')
 		if (cookies === 'enabled') {
-			$.cookie('darken', 'never', { expires: 365, path: '/' })
+			Cookies.set('darken', 'never', { expires: 365, path: '/' })
 		}
 	})
 	// END Darken Control
@@ -84,21 +84,21 @@ $(function($) {
 		$('#search').attr('action', 'https://duckduckgo.com/')
 		$('.current-search').html('You are currently searching with DuckDuckGo.')
 		if (cookies === 'enabled') {
-			$.cookie('default_search', 'DuckDuckGo', { expires: 365, path: '/' })
+			Cookies.set('default_search', 'DuckDuckGo', { expires: 365, path: '/' })
 		}
 	})
 	$('.change-to-google').click(function() {
 		$('#search').attr('action', 'https://www.google.com/search')
 		$('.current-search').html('You are currently searching with Google.')
 		if (cookies === 'enabled') {
-			$.cookie('default_search', 'Google', { expires: 365, path: '/' })
+			Cookies.set('default_search', 'Google', { expires: 365, path: '/' })
 		}
 	})
 	$('.change-to-yahoo').click(function() {
 		$('#search').attr('action', 'https://search.yahoo.com/search')
 		$('.current-search').html('You are currently searching with Yahoo!')
 		if (cookies === 'enabled') {
-			$.cookie('default_search', 'Yahoo', { expires: 365, path: '/' })
+			Cookies.set('default_search', 'Yahoo', { expires: 365, path: '/' })
 		}
 	})
 	// END Search Engine Change

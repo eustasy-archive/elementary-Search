@@ -15,6 +15,8 @@
 		<script src="assets/js/script.js"></script>
 		<?php
 
+			require_once __DIR__.'/../_functions/cookie.php';
+
 		function fallBack() {
 			$backgrounds = glob(__DIR__.'/../assets/images/wallpapers/*.jpg');
 			$k = array_rand($backgrounds);

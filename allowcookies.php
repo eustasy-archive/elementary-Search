@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] == 1) {
+if ( isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] == 1 ) {
 	header('Location: https://labs.eustasy.org/elementary-Search/', true, 302);
 	exit;
 }
@@ -34,7 +34,7 @@ require __DIR__.'/_templates/header.php'; ?>
 				<div class="control advert"></div>
 				<h3>Cookies</h3>
 				<label class="control cookies checkbox toggle candy" onclick="">
-					<input id="view" type="checkbox"<?php if (isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] == 1) echo ' checked'; ?>/>
+					<input id="view" type="checkbox"<?php echo cookie_is('allow_cookies', '1'); ?>/>
 					<p>
 						<span class="cookies-enabled">Enabled</span>
 						<span class="cookies-disabled">Disabled</span>
@@ -43,15 +43,15 @@ require __DIR__.'/_templates/header.php'; ?>
 				</label>
 				<h3><label>Darken</label></h3>
 				<div class="control darken enabled switch switch-three candy" onclick="" <?php if (!isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] != 1) echo ' style="display:none;"'; ?>>
-					<input id="never" name="view" type="radio"<?php if (isset($_COOKIE['darken']) && $_COOKIE['darken'] == 'never') echo ' checked'; ?>>
+					<input id="never"  name="view" type="radio"<?php echo cookie_is('darken', 'never'); ?>>
 					<label class="darken-never" for="never" onclick="">Never</label>
-					<input id="hover" name="view" type="radio"<?php if (isset($_COOKIE['darken']) && $_COOKIE['darken'] == 'hover') echo ' checked'; ?><?php if (!isset	($_COOKIE['darken'])) echo ' checked'; ?>>
+					<input id="hover"  name="view" type="radio"<?php echo cookie_is('darken', 'hover'); ?>>
 					<label class="darken-hover" for="hover" onclick="">On Hover</label>
-					<input id="always" name="view" type="radio"<?php if (isset($_COOKIE['darken']) && $_COOKIE['darken'] == 'always') echo ' checked'; ?>>
+					<input id="always" name="view" type="radio"<?php echo cookie_is('darken', 'always'); ?>>
 					<label class="darken-always" for="always" onclick="">Always</label>
 					<span class="slide-button"></span>
 				</div>
-				<div class="control darken disabled switch switch-three candy" onclick="" <?php if (isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] == 1) echo ' style="display:none;"'; ?>>
+				<div class="control darken disabled switch switch-three candy" onclick="" <?php echo cookie_is('allow_cookies', '1', ' style="display:none;"'); ?>>
 					<h4>You must enable cookies to change this setting.</h4>
 				</div>
 
