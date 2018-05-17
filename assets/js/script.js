@@ -148,9 +148,9 @@ $(function($) {
 	}
 	function disableLegal() {
 		if (LegalStatus === 1) {
-		$('.legal.popup').fadeOut('normal')
-		$('.legal.background').fadeOut('normal')
-		LegalStatus = 0
+			$('.legal.popup').fadeOut('normal')
+			$('.legal.background').fadeOut('normal')
+			LegalStatus = 0
 		}
 	}
 	// END Legal Popup Controls
