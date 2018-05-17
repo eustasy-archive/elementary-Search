@@ -1,4 +1,4 @@
-/*global $*/
+/*global $ Cookies*/
 
 // BEGIN Vertical-Centering for the Search form and Height-Setting for it's Button
 function getSize(){ // Define a function to get the sizes and position them properly
