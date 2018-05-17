@@ -14,18 +14,18 @@
 		<script src="https://cdn.jsdelivr.net/combine/gh/jquery/jquery@3/dist/jquery.min.js,gh/chuckcarpenter/REM-unit-polyfill@1/js/rem.min.js,gh/LeaVerou/prefixfree@1/prefixfree.min.js,gh/js-cookie/js-cookie@2/src/js.cookie.min.js"></script>
 		<script src="assets/js/script.js"></script>
 		<?php
-			require_once __DIR__.'/../_functions/cookie.php';
-			require_once __DIR__.'/../_functions/background.php';
-			echo background();
+		require_once __DIR__.'/../_functions/cookie.php';
+		require_once __DIR__.'/../_functions/background.php';
+		echo background();
 		?>
 	</head>
 	<body>
 		<div id="darken" class="<?php
-			if (
-				isset($_COOKIE['allow_cookies']) &&
-				$_COOKIE['allow_cookies'] == 1 &&
-				isset($_COOKIE['darken'])
-			) {
-				echo htmlentities($_COOKIE['darken'], ENT_QUOTES, 'UTF-8');
-			}
+		if (
+			isset($_COOKIE['allow_cookies']) &&
+			$_COOKIE['allow_cookies'] == 1 &&
+			isset($_COOKIE['darken'])
+		) {
+			echo htmlentities($_COOKIE['darken'], ENT_QUOTES, 'UTF-8');
+		}
 		?>">

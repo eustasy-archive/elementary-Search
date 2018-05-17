@@ -42,7 +42,7 @@ require __DIR__.'/_templates/header.php'; ?>
 					<a class="slide-button"></a>
 				</label>
 				<h3><label>Darken</label></h3>
-				<div class="control darken enabled switch switch-three candy" onclick="" <?php if (!isset($_COOKIE['allow_cookies']) && $_COOKIE['allow_cookies'] != 1) echo ' style="display:none;"'; ?>>
+				<div class="control darken enabled switch switch-three candy" onclick=""<?php echo cookie_is('allow_cookies', '1', ' style="display:none;"'); ?>>
 					<input id="never"  name="view" type="radio"<?php echo cookie_is('darken', 'never'); ?>>
 					<label class="darken-never" for="never" onclick="">Never</label>
 					<input id="hover"  name="view" type="radio"<?php echo cookie_is('darken', 'hover'); ?>>
