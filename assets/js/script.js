@@ -1,7 +1,7 @@
 /*global $ Cookies*/
 
 // BEGIN Vertical-Centering for the Search form and Height-Setting for it's Button
-function getSize(){ // Define a function to get the sizes and position them properly
+function getSize() { // Define a function to get the sizes and position them properly
 	var heightTop = ($(window).height()/2) - ($('#search').height()/2) - ($('#footer').height()/2) // Get the new Heights Top
 	$('#search').css('margin-top',heightTop) // Set the new Heights Top
 	var heightForm = $('#search').height() // Get the new Heights Top
@@ -80,26 +80,21 @@ $(function($) {
 
 
 	// BEGIN Search Engine Change
-	$('.change-to-duckduckgo').click(function() {
-		$('#search').attr('action', 'https://duckduckgo.com/')
-		$('.current-search').html('You are currently searching with DuckDuckGo.')
+	function setSearchEngine(se_name, se_url) {
+		$('#search').attr('action', se_url)
+		$('.current-search').html('You are currently searching with ' + se_name + '.')
 		if (cookies === 'enabled') {
-			Cookies.set('default_search', 'DuckDuckGo', { expires: 365, path: '/' })
+			Cookies.set('default_search', se_name, { expires: 365, path: '/' })
 		}
+	}
+	$('.change-to-duckduckgo').click(function() {
+		setSearchEngine('DuckDuckGo', 'https://duckduckgo.com/')
 	})
 	$('.change-to-google').click(function() {
-		$('#search').attr('action', 'https://www.google.com/search')
-		$('.current-search').html('You are currently searching with Google.')
-		if (cookies === 'enabled') {
-			Cookies.set('default_search', 'Google', { expires: 365, path: '/' })
-		}
+		setSearchEngine('Google', 'https://www.google.com/search')
 	})
 	$('.change-to-yahoo').click(function() {
-		$('#search').attr('action', 'https://search.yahoo.com/search')
-		$('.current-search').html('You are currently searching with Yahoo!')
-		if (cookies === 'enabled') {
-			Cookies.set('default_search', 'Yahoo', { expires: 365, path: '/' })
-		}
+		setSearchEngine('Yahoo', 'https://search.yahoo.com/search')
 	})
 	// END Search Engine Change
 
