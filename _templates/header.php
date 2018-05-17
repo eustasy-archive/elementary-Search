@@ -19,7 +19,6 @@
 			$backgrounds = glob(__DIR__.'/../assets/images/wallpapers/*.jpg');
 			$k = array_rand($backgrounds);
 			$current = array_pop(explode('/', $backgrounds[$k]));
-			var_dump($current);
 			echo '<style>
 			body { background: url(\'assets/images/wallpapers/', $current, '\') no-repeat center center fixed #222222; background-size: cover; }
 		</style>';
