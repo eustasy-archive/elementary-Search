@@ -1,0 +1,4 @@
+[submodule "cdns"]
+        path = assets/images/wallpapers
+        url = https://github.com/elementary/wallpapers
+
