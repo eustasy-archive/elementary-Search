@@ -25,7 +25,7 @@ before_script:
 
 script:
   - ./normal-checks/check-config.sh
-  - ./normal-checks/check-permissions.sh
+  #- ./normal-checks/check-permissions.sh
   - ./normal-checks/check-javascript.sh
   - ./normal-checks/check-php.sh
   - php normal-checks/check-json.php
